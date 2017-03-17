@@ -24,5 +24,39 @@ $(function(){
   //var $header = $(header);
   //console.log($header);
 
-  var headings = $('h1, h2');
+  //var headings = $('h1, h2');
+  //console.log(headings);
+  var a = $('<a>', {
+    href : 'http://platzi.com',
+    target: '_blank',
+    html: 'Ir a Platzi'
+  });
+
+  $("#app-body").append(a);
+
+  console.log(a.attr('href'));
+
+  a.attr({
+    href: 'http://google.com',
+    html: 'Ir a Google'
+  });
+  a.html('Ir a Google');
+
+  var $h1 = $('h1');
+  $h1.addClass('danger');
+
+  setTimeout(function(){
+    $h1.removeClass('danger');
+  }, 1500);
+
+  var $h1 = $('h1');
+  var $h1b = $('h1');
+  console.log($h1 === $h1b);
+  console.log($h1[0] === $h1b[0]);
+
+  /*$('h1').css({
+    'font-size': '70px'
+  });*/
+
+  //$('<p>', {html: 'Me acaban de crear'}).appendTo($('header#app-header'));
 });
